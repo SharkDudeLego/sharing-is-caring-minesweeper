@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Sharing is Caring Minesweeper</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Sharing is Caring Minesweeper</h1>
+        <div id="game">
+            <p id="game_data">0 (?) | 0/0 (⚐)</p>
+            <button id="restart" onclick="restart()">Restart</button>
+        </div>
+        <p>Each numbered tile represents the number of surrounding tiles that share the same mines with itself.</p>
+        <div class="menu">
+            <input id="set_width" class="num_input" type="number" placeholder="Width" value=9>
+            <input id="set_height" class="num_input" type="number" placeholder="Height" value=9>
+            <input id="set_mines" class="num_input" type="number" placeholder="Mines" value=10>
+            <button onclick="updateValues()">Update</button>
+        </div>
+        <div class="menu">
+            <button onclick="updateValues(9,9,10)">Beginner</button>
+            <button onclick="updateValues(16,16,40)">Intermediate</button>
+            <button onclick="updateValues(30,16,99)">Expert</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
